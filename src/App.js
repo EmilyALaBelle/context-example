@@ -1,13 +1,17 @@
-import './App.css';
+import { useState, createContext } from 'react';
 import Header from './components/Header';
 import Main from './components/Main';
+import './App.css';
+
+export const UserContext = createContext(null)
 
 function App() {
+  const [user, setUser] = useState('Emily') //creates a state variable user and a setter called set user
   return (
-    <>
+    <UserContext.Provider value={{user, setUser}}>
     <Header />
     <Main />
-    </>
+    </UserContext.Provider>
   );
 }
 
