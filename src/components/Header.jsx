@@ -1,7 +1,11 @@
+import MenuBar from "./MenuBar";
+import Title from "./Title";
+
 export default function Header() {
     return (
         <header>
-            <p>header</p>
+            <MenuBar />
+            <Title />
         </header>
     )
 }
